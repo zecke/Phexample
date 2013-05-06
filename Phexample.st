@@ -814,12 +814,13 @@ Object subclass: PhexMatcher [
 
     PhexMatcher class >> with: anObject [
 	<category: 'creation'>
-	^self new setValue: anObject
+	^self new initialize; setValue: anObject
     ]
 
     PhexMatcher class >> with: anObject state: aState [
 	<category: 'creation'>
 	^(self new)
+	    initialize;
 	    setValue: anObject;
 	    state: aState;
 	    yourself
