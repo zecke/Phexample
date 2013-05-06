@@ -828,12 +828,12 @@ Object subclass: PhexMatcher [
 
     < expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'<!'
+	^self expect: expected using: #'<'
     ]
 
     <= expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'<=!'
+	^self expect: expected using: #'<='
     ]
 
     = expected [
@@ -845,12 +845,12 @@ Object subclass: PhexMatcher [
 
     > expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'>!'
+	^self expect: expected using: #'>'
     ]
 
     >= expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'>=!'
+	^self expect: expected using: #'>='
     ]
 
     be [
@@ -879,7 +879,7 @@ Object subclass: PhexMatcher [
 
     beSameAs: expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'==!'
+	^self expect: expected using: #'=='
     ]
 
     beTrue [
