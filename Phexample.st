@@ -37,7 +37,11 @@ TestResource subclass: Given [
 TestCase subclass: Phexample [
     | givenNotGiven |
     
-    <comment: 'Phexample, because well designed tests expand on one another.Examples see ForExampleStack. by Adrian Kuhn and Niko Schwarz  '>
+    <comment: 'Phexample, because well designed tests expand on one another.
+
+Examples see ForExampleStack. 
+
+by Adrian Kuhn and Niko Schwarz  '>
     <category: 'Phexample-Core'>
 
     Phexample class >> allTestSelectors [
@@ -765,7 +769,25 @@ Object subclass: PhexMatcher [
     | value state |
     
     <category: 'Phexample-Core'>
-    <comment: 'A PhexMatcher is the sort of thing that works out if your example behaves properly or not. Most of the magic happens in expect:using:. Please notice that = works unlike in most classes. Therefore, do not store me in a collection!If you wish to forward to another ''should'' method call, the state of this matcherwould be lost. Instead, call either expect*, which works fine, or, if nothing else works,use self should:. Note that this is much slower and leads to messier stack traces than calling expectInstance Variables	state:		the items matched so far	value:		state	- xxxxxvalue	- xxxxx'>
+    <comment: 'A PhexMatcher is the sort of thing that works out if your example behaves properly or not. Most of the magic happens in expect:using:. 
+
+Please notice that = works unlike in most classes. Therefore, do not store me in a collection!
+
+If you wish to forward to another ''should'' method call, the state of this matcher
+would be lost. Instead, call either expect*, which works fine, or, if nothing else works,
+use self should:. Note that this is much slower and leads to messier stack traces than 
+calling expect
+
+Instance Variables
+	state:		the items matched so far
+	value:		
+
+state
+	- xxxxx
+
+value
+	- xxxxx
+'>
 
     PhexMatcher class >> rewriteRules [
 	"Use this TreeRewriter to rewrite existing SUnit tests to Phexample.
@@ -814,13 +836,12 @@ Object subclass: PhexMatcher [
 
     PhexMatcher class >> with: anObject [
 	<category: 'creation'>
-	^self new initialize; setValue: anObject
+	^self new setValue: anObject
     ]
 
     PhexMatcher class >> with: anObject state: aState [
 	<category: 'creation'>
 	^(self new)
-	    initialize;
 	    setValue: anObject;
 	    state: aState;
 	    yourself
@@ -828,12 +849,12 @@ Object subclass: PhexMatcher [
 
     < expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'<'
+	^self expect: expected using: #<
     ]
 
     <= expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'<='
+	^self expect: expected using: #<=
     ]
 
     = expected [
@@ -845,12 +866,12 @@ Object subclass: PhexMatcher [
 
     > expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'>'
+	^self expect: expected using: #>
     ]
 
     >= expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'>='
+	^self expect: expected using: #>=
     ]
 
     be [
@@ -879,7 +900,7 @@ Object subclass: PhexMatcher [
 
     beSameAs: expected [
 	<category: 'expecting'>
-	^self expect: expected using: #'=='
+	^self expect: expected using: #==
     ]
 
     beTrue [
