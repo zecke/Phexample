@@ -1,0 +1,5 @@
+* Call >>#initialize on PhexMatcher
+* includesSubString:caseSensitive missing from String/CharArray
+* >>#union: missing.. use '+'
+* Smalltalk>>#hasClassNamed: is missing
+* ClassFactoryForTestCase is not present. Skip tests

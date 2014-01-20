@@ -1,0 +1,18 @@
+<package>
+    <name>Phexample</name>
+    <prereq>SUnit</prereq>
+    <prereq>PharoCompat</prereq>
+
+    <namespace>Pharo</namespace>
+
+    <filein>Phexample.st</filein>
+    <filein>PhexamplePharo20.st</filein>
+    <filein>GSTPlatform.st</filein>
+    <filein>PhexampleInstructionMatcher.st</filein>
+
+    <test>
+        <sunit>Pharo.ForExampleMatcher</sunit>
+        <sunit>Pharo.PhexampleClassTest</sunit>
+        <sunit>Pharo.PhexampleTestSelectorTest</sunit>
+    </test>
+</package>
